@@ -1,3 +1,7 @@
 use this video to lern and practice viewport height: https://www.youtube.com/watch?v=wkztoWlwTXU
 
 use this to learn useMemo: https://www.youtube.com/watch?v=qySZIzZvZOY
+
+use this to learn hashRouter: https://www.youtube.com/watch?v=ip4Oybl7Rnc
+
+use this to learn queryClient : https://www.youtube.com/watch?v=s1NzKIbSse4
