@@ -78,7 +78,7 @@ const Login = () => {
           </div>
           <div className="lg:w-[60%] mx-auto">
             <h1 className="text-gray-700 font-bold text-2xl lg:text-3xl">
-              Bug Overflow
+              Bug Solverflow
             </h1>
             <p className="my-4">Welcome back! Please login to your account</p>
             <form className="mt-5 flex flex-col gap-2" onSubmit={handleSubmit}>
