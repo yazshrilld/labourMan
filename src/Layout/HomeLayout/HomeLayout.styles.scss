@@ -1,0 +1,12 @@
+.sideBar-item {
+    display: flex;
+    gap: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+  
+    &-description {
+      flex: 1;
+      font-size: 1rem;
+      text-align: left;
+    }
+  }

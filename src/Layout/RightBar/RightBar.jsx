@@ -7,12 +7,13 @@ import Container from '../Container/Container';
 const RightBar = () => {
   return (
     <>
-        <Grid
+        <Grid className='bg-blue-50'
             item
-            xs={2.5}
+            // xs={2.5}
             sx={{
-            bgcolor: 'lightgray',
+            // bgcolor: '#F58220',
             height: '100vh',
+            width: '20.9%',
             px: { xs: 2, lg: '1.875rem' },
             py: '1.5rem',
             }}
