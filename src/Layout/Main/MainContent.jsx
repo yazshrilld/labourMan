@@ -105,7 +105,7 @@ const MainContent = ({children}) => {
                       pr: '2rem',
                       pl: '2rem',
                       pt: '0.4rem',
-                      pb: '0.4rem',
+                      pb: '0.3rem',
                     }}
                     >
                       Abc
