@@ -97,7 +97,7 @@ const MainContent = ({children}) => {
                 >
                   <Stack
                     direction='column'
-                    className='flex items-center'
+                    className='flex items-center m-0'
                   >
                     <ButtonGroup>
                     <Button
