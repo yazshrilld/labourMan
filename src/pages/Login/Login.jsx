@@ -7,8 +7,8 @@ import FloatingInput from "../../components/FloatingInput/FloatingInput";
 import Container from "../../Layout/Container/Container";
 import Button from "../../components/Button/Button";
 
-import logo from "../../assets/images/logo.jpg";
-import image from "../../assets/images/oscar_homepage.jpg";
+import logo from "../../assets/images/logo2.png";
+import image from "../../assets/images/image_solve.jpg";
 import { toast } from "react-toastify";
 
 const baseUrl = "";
@@ -69,12 +69,12 @@ const Login = () => {
   return (
     <>
       <section className="relative">
-        <div className="absolute left-24 top-10 z-10">
+        <div className="absolute left-24 top-10 z-10 m-4">
           <img src={logo} alt="astraPay" className="h-[70px]" />
         </div>
         <Container className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-4 items-center relative">
           <div className="min-h-[90vh] flex items-center">
-            <img src={image} alt="login" className="w-[85%] mx-auto" />
+            <img src={image} alt="login" className="w-[85%] mx-auto mt-2" />
           </div>
           <div className="lg:w-[60%] mx-auto">
             <h1 className="text-gray-700 font-bold text-2xl lg:text-3xl">
