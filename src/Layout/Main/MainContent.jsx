@@ -66,7 +66,7 @@ const MainContent = ({children}) => {
                   
                 </span>
                 <div>
-                  Total Amount
+                  Total Count
                 </div>
               </Stack>
             </Box> 
