@@ -4,16 +4,16 @@ import SideBar from '../SideBar/SideBar'
 import MainContent from '../Main/MainContent'
 import Container from '../Container/Container'
 import Header from '../Header/Header'
-import RightBar from '../RightBar/RightBar'
 import Divider from '@mui/material/Divider';
 import HeaderD from '../Header/Header2'
 import AsideBar from '../AsideBar/AsideBar'
+import EmptyBar from '../EmptyBar/EmptyBar'
 
 
-const HomeLayout = ({ children }) => {
+const DashBoard = ({ children }) => {
   return (
     <>
-        <HeaderD />
+        <Header />
         <Grid
           sx={{
             display: 'flex',
@@ -29,10 +29,10 @@ const HomeLayout = ({ children }) => {
           <AsideBar />
           <MainContent>{children}</MainContent>
             <Divider></Divider>
-          <RightBar />
+          {/* <EmptyBar /> */}
         </Grid>
     </>
   )
 }
 
-export default HomeLayout
+export default DashBoard

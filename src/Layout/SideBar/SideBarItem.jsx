@@ -3,7 +3,7 @@ import { fontWeight } from '@mui/system'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const SideBarItem = ({name, icon, href}) => {
+const SideBarItem = ({name, icon, iconCount, href}) => {
 
   const {pathname} = useLocation()
 
@@ -13,7 +13,7 @@ const SideBarItem = ({name, icon, href}) => {
         to={href}
         className='sideBar-item'
       >
-      {icon}
+      {icon} {iconCount}
       <Typography
         className='sideBar-item-description'
       >

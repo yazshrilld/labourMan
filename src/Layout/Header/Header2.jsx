@@ -13,7 +13,11 @@ import { Stack } from '@mui/material';
 
 
 
-const Header = () => {
+const HeaderD = () => {
+
+    const __dropdownStyles =
+  "text-gray-400 font-semibold py-0.5 hover:border-b-2 hover:border-b-yellow-500 hover:text-yellow-500 duration-300";
+
   return (
     <>
         <nav className=''>
@@ -26,7 +30,15 @@ const Header = () => {
                             </div>
                         </span>
                     </div>
-                    <div className='flex items-center m-2 justify evenly gap-10'>
+                    <div className='flex items-center m-2 -mr-20 justify evenly gap-10'>
+                        <div className='mr-3'>
+                            <NavLink
+                                to=""
+                                className=""
+                            >
+                                Find LabourMan
+                            </NavLink>
+                        </div>
                         <div className='mr-3'>
                             <NavLink
                                 to=""
@@ -66,30 +78,20 @@ const Header = () => {
                         </div>
                     
                 </div>
-                <div className='mt-5'>
-                    <Box className='flex justify-between items-center'>
-                        <Stack
-                            direction='row'
-                            className='gap-5 mx-2.5'
-                        >
-                            <NavLink
-                                to=""
-                                className=""
-                            >
-                                Sign Up
-                            </NavLink>
-                            <Button
-                                variant='contained'
-                                size='small'
-                                sx={{
-                                mb: '2rem',
-                                // ml: '12.5rem'
-                                }}
-                            >
-                                Question
-                            </Button>
-                        </Stack>
-                    </Box>
+                <div className='flex gap-2 items-center'>
+                    <img src={avatar} alt="bugoverflow" className='h-[40px] object-center m-3'/>
+                    <div className='flex flex-col gap-0.5 text-sm'>
+                        Hello
+                        <div className='mr-3 flex justify-between items-center gap-4'>
+                            <button className='font-bold hover:text-blue-400 text-sm'>
+                            <h4>Yazid Musa</h4>
+                            </button>
+                            <div>
+                                <img src={logo} alt="bugoverflow" className='h-[10px]'/>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </nav>
@@ -97,4 +99,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderD

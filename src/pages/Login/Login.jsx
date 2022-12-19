@@ -3,11 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import FloatingInput from "../../components/FloatingInput/FloatingInput";
+import PlainInput from "../../components/PlainInput/PlainInput";
 import Container from "../../Layout/Container/Container";
 import Button from "../../components/Button/Button";
-
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/logo2.png"
 import image from "../../assets/images/image_solve.jpg";
 import { toast } from "react-toastify";
 
@@ -70,32 +69,66 @@ const Login = () => {
     <>
       <section className="relative">
         <div className="absolute left-24 top-10 z-10 m-4">
-          <img src={logo} alt="astraPay" className="h-[70px]" />
-        </div>
-        <Container className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-4 items-center relative">
-          <div className="min-h-[90vh] flex items-center">
-            <img src={image} alt="login" className="w-[85%] mx-auto mt-2" />
+          <div className='flex items-center mr-6'>
+              <span className='flex items-center'>
+                  <div>
+                      <p><b>LABOUR</b></p>
+                      <p className='text-fuchsia-500'><b>MAN</b></p>
+                  </div>
+              </span>
           </div>
-          <div className="lg:w-[60%] mx-auto">
-            <h1 className="text-gray-700 font-bold text-2xl lg:text-3xl">
-              Bug Solverflow
+        </div>
+        <Container className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-1 items-center relative">
+          <div className="min-h-[90vh] flex items-center">
+            <img src={image} alt="login" className="w-[65%] mx-auto mt-2" />
+          </div>
+          <div className="lg:w-[85%] mx-auto border border-fuchsia-400 rounded-3xl p-5 bg-slate-50">
+            <h1 className="text-gray-700 font-bold text-2xl lg:text-3xl mb-5">
+              Sign Up
             </h1>
-            <p className="my-4">Welcome back! Please login to your account</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-3 items-center relative">
+              <div className='flex items-center bg-white p-2 rounded-3xl gap-2'>
+                  <img src={logo} alt="bugoverflow" className='h-[30px]'/>
+                  <div>
+                      <div>Sign up with facebook</div>
+                  </div>
+              </div>
+              <div className='flex items-center bg-white p-2 rounded-3xl gap-2'>
+                  <img src={logo} alt="bugoverflow" className='h-[30px]'/>
+                  <div>
+                      <div>Sign up with google</div>
+                  </div>
+              </div>            </div>
             <form className="mt-5 flex flex-col gap-2" onSubmit={handleSubmit}>
-              <div>
-                <FloatingInput
-                  label="Username"
-                  value={values.username}
-                  onChange={handleChange}
-                  name="username"
-                  id="username"
-                />
-                <p className="text-red-500 mt-2 text-sm">
-                  {touched.username && errors?.username}
-                </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-3 items-center relative">
+                <div>
+                  <PlainInput
+                    label="Name"
+                    value={values.username}
+                    onChange={handleChange}
+                    name="username"
+                    id="username"
+                  />
+                  <p className="text-red-500 mt-2 text-sm">
+                    {touched.username && errors?.username}
+                  </p>
+                </div>
+                <div>
+                  <PlainInput
+                    label="Email"
+                    value={values.username}
+                    onChange={handleChange}
+                    name="username"
+                    id="username"
+                    type="username"
+                  />
+                  <p className="text-red-500 mt-2 text-sm">
+                    {touched.username && errors?.username}
+                  </p>
+                </div>
               </div>
               <div>
-                <FloatingInput
+                <PlainInput
                   label="Password"
                   value={values.password}
                   onChange={handleChange}
@@ -107,15 +140,30 @@ const Login = () => {
                   {touched.password && errors?.password}
                 </p>
               </div>
+              <div className="gap-3 flex mb-[50px] items-center">
+                <input 
+                    className=""
+                    type="checkbox" 
+                    name="" 
+                    id="" 
+                />
+                <div 
+                    className="text-xl"
+                    type="text"
+                >
+                  Creating an account means you're okay
+                </div>
+              </div>
               <Button
-              bgColor="bg-blue-400"
-              text="Login"
-              type="submit"
-              textColor="text-white"
-              activeRingColor="active:ring-blue-400"
-              loading={isSubmitting}
-              loadingColor="#fff"
-            />
+                className='w-[15rem] mb-[5px] text-sm font-semibold text-white px-5 py-3.5'
+                bgColor="bg-fuchsia-600"
+                text="Create an Account"
+                type="submit"
+                textColor="text-white"
+                activeRingColor="active:ring-blue-400"
+                loading={isSubmitting}
+                loadingColor="#fff"
+              />
             </form>
           </div>
         </Container>

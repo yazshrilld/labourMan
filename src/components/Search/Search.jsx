@@ -18,9 +18,10 @@ const Search = ({value, handleChange, name, handleSubmit, placeholder}) => {
             placeholder={placeholder}
             onChange={handleChange}
             variant='outlined'
-            sx={{width: '33rem', px: 2, minHeight: 100,
+            sx={{width: '15rem', bgcolor: 'lightblue', borderRadius: '10px', border: 'none',
                 "& .MuiInputBase-root": {
-                    height: 40
+                    height: 40,
+                    border: 'none'
                 }}}
             InpuProps={{
                 startAdornment: (
