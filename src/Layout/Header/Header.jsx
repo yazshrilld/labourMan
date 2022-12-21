@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from "../../assets/images/logo2.png"
 import  styles from "./styles.modules.css"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 import avatar from "../../assets/images/dummy-avatar.jpg";
 import Box from '@mui/material/Box';
@@ -14,6 +14,17 @@ import { Stack } from '@mui/material';
 
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
+    const onLogClick = () => {
+        const bread = "sweet";
+        console.log(bread)
+        if(bread === "sweet") {
+          navigate("/home")
+        }
+      }
+
   return (
     <>
         <nav className=''>
@@ -79,14 +90,16 @@ const Header = () => {
                                 Sign Up
                             </NavLink>
                             <Button
+                                className='bg-fuchsia-600'
                                 variant='contained'
                                 size='small'
                                 sx={{
                                 mb: '2rem',
                                 // ml: '12.5rem'
                                 }}
+                                onClick={onLogClick}
                             >
-                                Question
+                                Login
                             </Button>
                         </Stack>
                     </Box>

@@ -20,51 +20,59 @@ const INITIAL_FORM_FIELDS = {
 const Login = () => {
   const navigate = useNavigate();
 
-  const { values, errors, handleChange, handleSubmit, isSubmitting, touched } =
-    useFormik({
-      initialValues: INITIAL_FORM_FIELDS,
-      validationSchema: Yup.object({
-        username: Yup.string()
-          .required("Username is required")
-          .min(4, "Username cannot be shorter than 4 characters"),
-        password: Yup.string()
-          .required("Password is required")
-          .min(7, "Password must be at least 7 characters"),
-      }),
-      onSubmit: async (values, { resetForm }) => {
-        try {
-          const payload = {
-            ...values,
-            password: btoa(values.password),
-          };
-          const response = await axios.post(
-            `${baseUrl}/user/auth/login`,
-            payload
-          );
-          console.log(response);
-          if (response.status === 200) {
-            sessionStorage.setItem("userName", values.username);
-            console.log("userName: ", values.username);
-            sessionStorage.setItem(
-              "userCode",
-              response?.data?.OTPDetails?.userCode
-            );
-            // console.log("UserCode:",userCode)
-            resetForm(INITIAL_FORM_FIELDS);
-            navigate("/token");
-          }
-        } catch (error) {
-          if (error.request) {
-            console.log(error.request);
-          } else if (error.response) {
-            console.log(error.response);
-          } else {
-            console.log(error);
-          }
-          toast.error("Invalid Credentials Entered, Please tyr again");
-        }
-      },
-    });
+  const onLogClick = () => {
+    const bread = "sweet";
+    console.log(bread)
+    if(bread === "sweet") {
+      navigate("/search")
+    }
+  }
+
+  // const { values, errors, handleChange, handleSubmit, isSubmitting, touched } =
+  //   useFormik({
+  //     initialValues: INITIAL_FORM_FIELDS,
+  //     validationSchema: Yup.object({
+  //       username: Yup.string()
+  //         .required("Username is required")
+  //         .min(4, "Username cannot be shorter than 4 characters"),
+  //       password: Yup.string()
+  //         .required("Password is required")
+  //         .min(7, "Password must be at least 7 characters"),
+  //     }),
+  //     onSubmit: async (values, { resetForm }) => {
+  //       try {
+  //         const payload = {
+  //           ...values,
+  //           password: btoa(values.password),
+  //         };
+  //         const response = await axios.post(
+  //           `${baseUrl}/user/auth/login`,
+  //           payload
+  //         );
+  //         console.log(response);
+  //         if (response.status === 200) {
+  //           sessionStorage.setItem("userName", values.username);
+  //           console.log("userName: ", values.username);
+  //           sessionStorage.setItem(
+  //             "userCode",
+  //             response?.data?.OTPDetails?.userCode
+  //           );
+  //           // console.log("UserCode:",userCode)
+  //           resetForm(INITIAL_FORM_FIELDS);
+  //           navigate("/search");
+  //         }
+  //       } catch (error) {
+  //         if (error.request) {
+  //           console.log(error.request);
+  //         } else if (error.response) {
+  //           console.log(error.response);
+  //         } else {
+  //           console.log(error);
+  //         }
+  //         toast.error("Invalid Credentials Entered, Please tyr again");
+  //       }
+  //     },
+  //   });
   return (
     <>
       <section className="relative">
@@ -99,45 +107,47 @@ const Login = () => {
                       <div>Sign up with google</div>
                   </div>
               </div>            </div>
-            <form className="mt-5 flex flex-col gap-2" onSubmit={handleSubmit}>
+            <form className="mt-5 flex flex-col gap-2" 
+              // onSubmit={handleSubmit}
+            >
               <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-3 items-center relative">
                 <div>
                   <PlainInput
                     label="Name"
-                    value={values.username}
-                    onChange={handleChange}
+                    // value={values.username}
+                    // onChange={handleChange}
                     name="username"
                     id="username"
                   />
                   <p className="text-red-500 mt-2 text-sm">
-                    {touched.username && errors?.username}
+                    {/* {touched.username && errors?.username} */}
                   </p>
                 </div>
                 <div>
                   <PlainInput
                     label="Email"
-                    value={values.username}
-                    onChange={handleChange}
+                    // value={values.username}
+                    // onChange={handleChange}
                     name="username"
                     id="username"
                     type="username"
                   />
                   <p className="text-red-500 mt-2 text-sm">
-                    {touched.username && errors?.username}
+                    {/* {touched.username && errors?.username} */}
                   </p>
                 </div>
               </div>
               <div>
                 <PlainInput
                   label="Password"
-                  value={values.password}
-                  onChange={handleChange}
+                  // value={values.password}
+                  // onChange={handleChange}
                   name="password"
                   id="password"
                   type="password"
                 />
                 <p className="text-red-500 mt-2 text-sm">
-                  {touched.password && errors?.password}
+                  {/* {touched.password && errors?.password} */}
                 </p>
               </div>
               <div className="gap-3 flex mb-[50px] items-center">
@@ -161,8 +171,9 @@ const Login = () => {
                 type="submit"
                 textColor="text-white"
                 activeRingColor="active:ring-blue-400"
-                loading={isSubmitting}
+                // loading={isSubmitting}
                 loadingColor="#fff"
+                onClick={onLogClick}
               />
             </form>
           </div>
