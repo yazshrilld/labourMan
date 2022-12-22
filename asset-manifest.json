@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/labourMan/static/css/main.9d404fb0.css",
-    "main.js": "/labourMan/static/js/main.566a8758.js",
+    "main.css": "/labourMan/static/css/main.23ac2687.css",
+    "main.js": "/labourMan/static/js/main.3122ef31.js",
+    "static/media/Images.png": "/labourMan/static/media/Images.f0b2fca70153a3df9913.png",
+    "static/media/Group 116.png": "/labourMan/static/media/Group 116.adb5dc50bb13981ae6f1.png",
     "static/media/dummy-avatar.jpg": "/labourMan/static/media/dummy-avatar.0b3bac7213c1059cf7a8.jpg",
     "index.html": "/labourMan/index.html",
     "static/media/password-off.svg": "/labourMan/static/media/password-off.856c06f42adc3dd9e7f2ea7f4db23112.svg",
-    "main.9d404fb0.css.map": "/labourMan/static/css/main.9d404fb0.css.map",
-    "main.566a8758.js.map": "/labourMan/static/js/main.566a8758.js.map"
+    "main.23ac2687.css.map": "/labourMan/static/css/main.23ac2687.css.map",
+    "main.3122ef31.js.map": "/labourMan/static/js/main.3122ef31.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d404fb0.css",
-    "static/js/main.566a8758.js"
+    "static/css/main.23ac2687.css",
+    "static/js/main.3122ef31.js"
   ]
 }
