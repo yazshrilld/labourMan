@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import { Stack } from '@mui/material'
 import image from "../../assets/images/image_solve.jpg"
+import heroImage from "../../assets/images/Images.png"
 import SearchWithIcon from '../../components/Search/SearchWithIcon'
 
 
@@ -14,15 +15,15 @@ import SearchWithIcon from '../../components/Search/SearchWithIcon'
 const SearchLabour = () => {
   return (
     <>
-    <div className=' bg-slate-100'>
+    <div className='mt-9'>
         <Header />
             <Container className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-1 items-center relative">
                 <div className=''>
                     <Box className=''>
                         <Stack className='absolute top-[120px] left-[190px]'>
-                            <div className='text-4xl'>
+                            <div className='text-5xl'>
                                 <p>
-                                Chidi we are not here to put 
+                                We are here to put 
                                 </p>
                                 <p>
                                  put a smile on your face
@@ -35,7 +36,7 @@ const SearchLabour = () => {
                     </Box>
                 </div>
                 <div className="min-h-[90vh] flex items-center">
-                <img src={image} alt="login" className="w-[65%] h-[70vh] mx-auto" />
+                <img src={heroImage} alt="login" className="w-[60%] h-[60%] mx-auto" />
             </div>
             </Container>
     </div>

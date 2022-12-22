@@ -8,6 +8,7 @@ import Container from "../../Layout/Container/Container";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/images/logo2.png"
 import image from "../../assets/images/image_solve.jpg";
+import imageHero from "../../assets/images/Group 116.png";
 import { toast } from "react-toastify";
 
 const baseUrl = "";
@@ -79,8 +80,8 @@ const Login = () => {
         <div className="absolute left-24 top-10 z-10 m-4">
           <div className='flex items-center mr-6'>
               <span className='flex items-center'>
-                  <div>
-                      <p><b>LABOUR</b></p>
+                  <div className="sm:text-2xl">
+                      <p><b className="">LABOUR</b></p>
                       <p className='text-fuchsia-500'><b>MAN</b></p>
                   </div>
               </span>
@@ -88,7 +89,7 @@ const Login = () => {
         </div>
         <Container className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-1 items-center relative">
           <div className="min-h-[90vh] flex items-center">
-            <img src={image} alt="login" className="w-[65%] mx-auto mt-2" />
+            <img src={imageHero} alt="login" className="w-[65%] mx-auto mt-[7rem]" />
           </div>
           <div className="lg:w-[85%] mx-auto border border-fuchsia-400 rounded-3xl p-5 bg-slate-50">
             <h1 className="text-gray-700 font-bold text-2xl lg:text-3xl mb-5">

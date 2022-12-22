@@ -85,7 +85,7 @@ const Header = () => {
                         >
                             <NavLink
                                 to=""
-                                className=""
+                                className="mt-2"
                             >
                                 Sign Up
                             </NavLink>
@@ -95,6 +95,9 @@ const Header = () => {
                                 size='small'
                                 sx={{
                                 mb: '2rem',
+                                px: '1.5rem',
+                                py: '0.5rem',
+                                bgcolor: '#F600ce',
                                 // ml: '12.5rem'
                                 }}
                                 onClick={onLogClick}
